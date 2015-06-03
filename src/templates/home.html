@@ -1,7 +1,7 @@
 <div>
     <md-toolbar >
         <div class="md-toolbar-tools" layout="row" >
-            <md-button ng-click="toggleSideNav()" class="md-icon-button" aria-label="Settings" flex="5" >
+            <md-button ng-show="isVisibleOnCurrentScreenSize" ng-click="toggleSideNav()" class="md-icon-button" aria-label="Settings" flex="5" >
                 <ng-md-icon icon="menu" size="24" style="fill:white" layout="row" layout-align="center center"></ng-md-icon>
             </md-button>
             <h2>
@@ -10,21 +10,25 @@
         </div>
     </md-toolbar>
 
-    <md-content flex layout="row">
-        <md-sidenav flex md-component-id="left" class="md-sidenav-left smaller-sidenav md-whiteframe-z2" md-is-locked-open="$mdMedia('gt-md')">
-            <md-content>
-                <span>test</span>
+    <md-content flex layout="row" style="min-height: 600px;">
+        <md-sidenav flex md-component-id="left" class="md-sidenav-left smaller-sidenav md-whiteframe-z6" md-is-locked-open="$mdMedia('gt-md')">
+            <md-content flex layout-padding>
+                <md-list flex  >
+                    <md-list-item class="md-3-line">
+                        <md-button flex>Home</md-button>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <md-button flex>Getting Started</md-button>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <md-button flex>About</md-button>
+                    </md-list-item>
+                </md-list>
             </md-content>
         </md-sidenav>
-        <div>
-            content
-            <br/>content
-            <br/>content
-            <br/>content
-            <br/>content
-            <br/>content
-            <br/>content
-            <br/>
+
+        <div layout-padding >
+            <strong>Welcome to seed project.</strong>
         </div>
     </md-content>
 </div>
