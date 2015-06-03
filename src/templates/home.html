@@ -1,16 +1,30 @@
 <div>
     <md-toolbar >
         <div class="md-toolbar-tools" layout="row" >
-            <md-button class="md-icon-button" aria-label="Settings" flex="5" >
+            <md-button ng-click="toggleSideNav()" class="md-icon-button" aria-label="Settings" flex="5" >
                 <ng-md-icon icon="menu" size="24" style="fill:white" layout="row" layout-align="center center"></ng-md-icon>
             </md-button>
             <h2>
-                Seed project to get started with AngularJS and Material Design
+                AngularJS Material Seed Project
             </h2>
         </div>
     </md-toolbar>
 
-    <md-content>
-
+    <md-content flex layout="row">
+        <md-sidenav flex md-component-id="left" class="md-sidenav-left smaller-sidenav md-whiteframe-z2" md-is-locked-open="$mdMedia('gt-md')">
+            <md-content>
+                <span>test</span>
+            </md-content>
+        </md-sidenav>
+        <div>
+            content
+            <br/>content
+            <br/>content
+            <br/>content
+            <br/>content
+            <br/>content
+            <br/>content
+            <br/>
+        </div>
     </md-content>
 </div>
