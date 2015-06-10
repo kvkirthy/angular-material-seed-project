@@ -11,10 +11,10 @@
     </md-toolbar>
 
     <md-content flex layout="row" style="min-height: 600px;">
-        <md-sidenav flex md-component-id="left" class="md-sidenav-left smaller-sidenav md-whiteframe-z6" md-is-locked-open="$mdMedia('gt-md')">
-            <md-content flex layout-padding>
+        <md-sidenav style="min-height: inherit; height: inherit" flex md-component-id="left" class="md-sidenav-left md-whiteframe-z2" md-is-locked-open="$mdMedia('gt-md')">
+            <md-content style="min-height: inherit; height: inherit" md-theme="custom">
                 <md-list flex  >
-                    <md-list-item class="md-3-line">
+                    <md-list-item>
                         <md-button flex>Home</md-button>
                     </md-list-item>
                     <md-list-item class="md-3-line">
@@ -28,7 +28,7 @@
         </md-sidenav>
 
         <div layout-padding >
-            <strong>Welcome to seed project.</strong>
+            <div ui-view></div>
         </div>
     </md-content>
 </div>
