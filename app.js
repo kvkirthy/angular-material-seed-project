@@ -10,6 +10,7 @@ angular.module('VenCKi-Angular-Material', ["ngMaterial", "ui.router", "ngMdIcons
             })
             .state('home.recipeList', {
                 url:'/recipes',
+                controller: require('./src/js/recipeController'),
                 templateUrl:'src/templates/recipeList.html'
             })
             .state('home.techStack', {
@@ -32,7 +33,7 @@ angular.module('VenCKi-Angular-Material', ["ngMaterial", "ui.router", "ngMdIcons
         $urlRouterProvider.otherwise('/home/recipes');
     })
 ;
-},{"./src/js/home":2}],2:[function(require,module,exports){
+},{"./src/js/home":2,"./src/js/recipeController":3}],2:[function(require,module,exports){
 module.exports = function ($scope, $mdSidenav, $mdMedia){
     $scope.toggleSideNav = function(){
         $mdSidenav('left').toggle();
@@ -44,5 +45,33 @@ module.exports = function ($scope, $mdSidenav, $mdMedia){
     })
 
     $scope.message = "Hello CommonJS World";
+};
+},{}],3:[function(require,module,exports){
+module.exports = function ($scope){
+    $scope.recipeList = [{
+        title: 'Burger',
+        description:'Delicious Burger King burger with veg pattie',
+        image: 'images/burger.png'
+    },{
+        title: 'Pizza',
+        description:'Delicious Domino\'s Pizza with 8 options of toppings',
+        image: 'images/pizza.png'
+    },{
+        title: 'Burrito',
+        description:'Mixicans are here',
+        image: 'images/burrito.png'
+    },{
+        title: 'Ice Cream',
+        description:'Taste buds can\'t resist.',
+        image: 'images/icecream.png'
+    },{
+        title: 'Salad',
+        description:'Health is wealth',
+        image: 'images/salad.gif'
+    },{
+        title: 'More',
+        description:'Checkout more menu options',
+        image: 'images/more.png'
+    }];
 };
 },{}]},{},[1]);

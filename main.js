@@ -9,6 +9,7 @@ angular.module('VenCKi-Angular-Material', ["ngMaterial", "ui.router", "ngMdIcons
             })
             .state('home.recipeList', {
                 url:'/recipes',
+                controller: require('./src/js/recipeController'),
                 templateUrl:'src/templates/recipeList.html'
             })
             .state('home.techStack', {

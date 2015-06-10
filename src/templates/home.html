@@ -10,10 +10,12 @@
         </div>
     </md-toolbar>
 
-    <md-content flex layout="row" style="min-height: 600px;">
-        <md-sidenav style="min-height: inherit; height: inherit" flex md-component-id="left" class="md-sidenav-left md-whiteframe-z2" md-is-locked-open="$mdMedia('gt-md')">
-            <md-content style="min-height: inherit; height: inherit" md-theme="custom">
-                <md-list flex  >
+    <md-content flex layout="row" >
+        <md-sidenav flex  md-component-id="left" class="md-sidenav-left md-whiteframe-z2" md-is-locked-open="$mdMedia('gt-md')">
+            <section flex >
+                <md-content flex>
+
+                <md-list flex layout="column" >
                     <md-list-item>
                         <md-button flex>Home</md-button>
                     </md-list-item>
@@ -24,10 +26,12 @@
                         <md-button flex>About</md-button>
                     </md-list-item>
                 </md-list>
-            </md-content>
+                </md-content>
+
+            </section>
         </md-sidenav>
 
-        <div layout-padding >
+        <div layout-padding flex id="content">
             <div ui-view></div>
         </div>
     </md-content>
