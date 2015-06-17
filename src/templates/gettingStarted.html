@@ -1,8 +1,9 @@
-<div >
+<div flex>
 
-    <div flex layout-gt-md="row" layout="column">
-        <md-card flex="50">
-            <md-card-content>
+    <md-tabs md-dynamic-height md-border-bottom>
+        <md-tab label="Why?" >
+            <md-content class="md-padding">
+                <h3>Why Seed project?</h3>
                 <p>
                     Seed Project helps get started with Angular Material quickly. It has multiple examples commonly used in any typical project.
                     You might edit, delete and integrate with services quickly.
@@ -14,7 +15,69 @@
                 <p>
                     Of course if you have different Tech Stack like Bower or requirejs it's not so useful after all.
                 </p>
-            </md-card-content>
+            </md-content>
+        </md-tab>
+        <md-tab label="How?" >
+            <md-content class="md-padding">
+                <h3>How do I get started?</h3>
+                <ol>
+                    <li>
+                        Clone seed project from <a href="https://github.com/kvkirthy/angular-material-seed-project" target="_blank">here</a>
+                    </li>
+                    <li>
+                        Open command prompt at project location and perform <strong>npm install</strong>.
+                    </li>
+                    <li>
+                        Run the project on any local web server.
+                    </li>
+                </ol>
+                <strong>Note: </strong> As you make changes to the project <strong>run browserify main.js o- app.js</strong>
+            </md-content>
+        </md-tab>
+        <md-tab label="What?" >
+            <md-content class="md-padding">
+                <h3>Tech Stack</h3>
+                <ol>
+                    <li>
+                        <h4>Angular Material</h4>
+                        <p>Angular Material Library. It makes it easy to develop Material design app using AngularJS.
+                            It depends on AngularJS, Angular Aria and Angular Animate. <a href="https://github.com/angular/material" target="_blank">Go To Repo</a></p>
+
+                    </li>
+                    <li>
+                        <h4>NPM</h4>
+                        <p>Node Package Manager - takes care installing the library in question and all it's dependencies.<a href="https://www.npmjs.com/" target="_blank">Go To Site</a></p>
+
+                    </li>
+                    <li>
+                        <h4>Common JS</h4>
+                        <p>Module loading within JavaScript made easy. NodeJS style of writing code.
+                            It works pretty well with NPM packages. <a href="http://wiki.commonjs.org/wiki/CommonJS" target="_blank">Go To Wiki</a></p>
+                    </li>
+                    <li>
+                        <h4>Browserify</h4>
+                        <p>Unline node servers, browsers by default don't work with CommonJS.  This makes it compatible. <a href="http://browserify.org/" target="_blank">Go To Site</a></p>
+                    </li>
+                </ol>
+            </md-content>
+        </md-tab>
+    </md-tabs>
+
+    <!--<div flex layout-gt-md="row" layout="column">
+        <md-card flex="50">
+            <md-card-content>
+            <p>
+                Seed Project helps get started with Angular Material quickly. It has multiple examples commonly used in any typical project.
+                You might edit, delete and integrate with services quickly.
+            </p>
+            <p>
+                It has everything around Angular Material setup already. Package Manager NPM, Common JS script loading and browserify is already setup.
+                You don't need to spend time setting up this stuff.
+            </p>
+            <p>
+                Of course if you have different Tech Stack like Bower or requirejs it's not so useful after all.
+            </p>
+        </md-card-content>
             <md-card-footer flex layout="row" layout-align="end end">
                 <h3>Why Seed project?</h3>
             </md-card-footer>
@@ -71,5 +134,5 @@
                 <h3>Tech Stack</h3>
             </md-card-footer>
         </md-card>
-    </div>
+    </div>-->
 </div>
