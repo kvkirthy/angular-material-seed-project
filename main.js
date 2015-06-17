@@ -16,6 +16,10 @@ angular.module('VenCKi-Angular-Material', ["ngMaterial", "ui.router", "ngMdIcons
                 url:'/techStack',
                 templateUrl:'src/templates/techStack.html'
             })
+            .state('home.sampleForm',{
+                url:'/sampleForm',
+                templateUrl: 'src/templates/sampleForm.html'
+            })
             .state('home.about', {
                 url:'/about',
                 templateUrl:'src/templates/about.html'

@@ -17,6 +17,10 @@ angular.module('VenCKi-Angular-Material', ["ngMaterial", "ui.router", "ngMdIcons
                 url:'/techStack',
                 templateUrl:'src/templates/techStack.html'
             })
+            .state('home.sampleForm',{
+                url:'/sampleForm',
+                templateUrl: 'src/templates/sampleForm.html'
+            })
             .state('home.about', {
                 url:'/about',
                 templateUrl:'src/templates/about.html'
@@ -41,13 +45,12 @@ module.exports = function ($scope, $mdSidenav, $mdMedia){
 
     $scope.$watch(function(){
         $scope.isVisibleOnCurrentScreenSize = (!$mdMedia("gt-md"));
-
-    })
+    });
 
     $scope.message = "Hello CommonJS World";
 };
 },{}],3:[function(require,module,exports){
-module.exports = function ($scope){
+module.exports = function ($scope, $mdBottomSheet){
     $scope.recipeList = [{
         title: 'Burger',
         description:'Delicious Burger King burger with veg pattie',
@@ -58,7 +61,7 @@ module.exports = function ($scope){
         image: 'images/pizza.png'
     },{
         title: 'Burrito',
-        description:'Mixicans are here',
+        description:'Mixicans arrived',
         image: 'images/burrito.png'
     },{
         title: 'Ice Cream',
@@ -73,5 +76,11 @@ module.exports = function ($scope){
         description:'Checkout more menu options',
         image: 'images/more.png'
     }];
+
+    $scope.openBottomSheet = function() {
+        $mdBottomSheet.show({
+            templateUrl: 'src/templates/bottomSheet.html'
+        });
+    };
 };
 },{}]},{},[1]);

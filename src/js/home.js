@@ -5,8 +5,7 @@ module.exports = function ($scope, $mdSidenav, $mdMedia){
 
     $scope.$watch(function(){
         $scope.isVisibleOnCurrentScreenSize = (!$mdMedia("gt-md"));
-
-    })
+    });
 
     $scope.message = "Hello CommonJS World";
 };

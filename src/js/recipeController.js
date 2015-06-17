@@ -1,4 +1,4 @@
-module.exports = function ($scope){
+module.exports = function ($scope, $mdBottomSheet){
     $scope.recipeList = [{
         title: 'Burger',
         description:'Delicious Burger King burger with veg pattie',
@@ -9,7 +9,7 @@ module.exports = function ($scope){
         image: 'images/pizza.png'
     },{
         title: 'Burrito',
-        description:'Mixicans are here',
+        description:'Mixicans arrived',
         image: 'images/burrito.png'
     },{
         title: 'Ice Cream',
@@ -24,4 +24,10 @@ module.exports = function ($scope){
         description:'Checkout more menu options',
         image: 'images/more.png'
     }];
+
+    $scope.openBottomSheet = function() {
+        $mdBottomSheet.show({
+            templateUrl: 'src/templates/bottomSheet.html'
+        });
+    };
 };
