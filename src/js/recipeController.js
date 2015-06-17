@@ -27,7 +27,10 @@ module.exports = function ($scope, $mdBottomSheet){
 
     $scope.openBottomSheet = function() {
         $mdBottomSheet.show({
-            templateUrl: 'src/templates/bottomSheet.html'
+            templateUrl: 'src/templates/bottomSheet.html',
+            controller: 'bottomSheetController'
         });
     };
+
+
 };

@@ -23,6 +23,10 @@ angular.module('VenCKi-Angular-Material', ["ngMaterial", "ui.router", "ngMdIcons
             .state('home.about', {
                 url:'/about',
                 templateUrl:'src/templates/about.html'
+            })
+            .state('home.gettingStarted', {
+                url:'/gettingStarted',
+                templateUrl:'src/templates/gettingStarted.html'
             });
 
 /*        $mdThemingProvider.theme('default')
@@ -33,6 +37,8 @@ angular.module('VenCKi-Angular-Material', ["ngMaterial", "ui.router", "ngMdIcons
             .accentPalette('orange')
             .backgroundPalette('light-blue');
 
-        $urlRouterProvider.otherwise('/home/recipes');
+        $urlRouterProvider.otherwise('/home/gettingStarted');
     })
+    .controller('bottomSheetController',require('./src/js/bottomSheetController'))
 ;
+

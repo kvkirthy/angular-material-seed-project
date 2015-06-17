@@ -24,6 +24,10 @@ angular.module('VenCKi-Angular-Material', ["ngMaterial", "ui.router", "ngMdIcons
             .state('home.about', {
                 url:'/about',
                 templateUrl:'src/templates/about.html'
+            })
+            .state('home.gettingStarted', {
+                url:'/gettingStarted',
+                templateUrl:'src/templates/gettingStarted.html'
             });
 
 /*        $mdThemingProvider.theme('default')
@@ -34,10 +38,22 @@ angular.module('VenCKi-Angular-Material', ["ngMaterial", "ui.router", "ngMdIcons
             .accentPalette('orange')
             .backgroundPalette('light-blue');
 
-        $urlRouterProvider.otherwise('/home/recipes');
+        $urlRouterProvider.otherwise('/home/gettingStarted');
     })
+    .controller('bottomSheetController',require('./src/js/bottomSheetController'))
 ;
-},{"./src/js/home":2,"./src/js/recipeController":3}],2:[function(require,module,exports){
+
+
+},{"./src/js/bottomSheetController":2,"./src/js/home":3,"./src/js/recipeController":4}],2:[function(require,module,exports){
+module.exports = function($scope, $mdToast){
+    $scope.showToast = function(msg){
+        $mdToast.show($mdToast.simple()
+                .content(msg)
+                .position('top right')
+        );
+    };
+}
+},{}],3:[function(require,module,exports){
 module.exports = function ($scope, $mdSidenav, $mdMedia){
     $scope.toggleSideNav = function(){
         $mdSidenav('left').toggle();
@@ -49,7 +65,7 @@ module.exports = function ($scope, $mdSidenav, $mdMedia){
 
     $scope.message = "Hello CommonJS World";
 };
-},{}],3:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 module.exports = function ($scope, $mdBottomSheet){
     $scope.recipeList = [{
         title: 'Burger',
@@ -79,8 +95,11 @@ module.exports = function ($scope, $mdBottomSheet){
 
     $scope.openBottomSheet = function() {
         $mdBottomSheet.show({
-            templateUrl: 'src/templates/bottomSheet.html'
+            templateUrl: 'src/templates/bottomSheet.html',
+            controller: 'bottomSheetController'
         });
     };
+
+
 };
 },{}]},{},[1]);
