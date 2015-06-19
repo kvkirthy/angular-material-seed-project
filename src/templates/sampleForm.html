@@ -1,13 +1,19 @@
  <div layout="column">
-    <md-content md-theme="docs-dark" layout-padding layout-sm="column">
+    <md-content layout-padding layout-sm="column">
         <form name="userForm">
-            <div layout layout-sm="column">
-                <md-input-container style="width:80%">
+            <div layout layout-padding-gt-sm layout-sm="column">
+                <md-input-container layout layout-align-gt-sm="start start"  flex-gt-sm="30" flex>
                     <label>Selected Dish</label>
                     <input value="Pepparoni Pizza" >
                 </md-input-container>
-                <md-input-container flex>
-                    <label>Schedule Delivery</label>
+                <div layout="row" layout-align-gt-sm="start center" flex-gt-sm="50" flex>
+                    <label flex="25">Spice Level</label>
+                    <md-slider flex="70" min="1" max="10" aria-label="Spicy?" ng-model="spice" class="md-primary">
+                    </md-slider>
+                    <span flex="5" layout layout-align="center center">{{spice}}</span>
+                </div>
+                <md-input-container layout layout-align-gt-sm="center end"  flex>
+                    <label>Time</label>
                     <input type="time" >
                 </md-input-container>
             </div>
@@ -33,10 +39,12 @@
                     <label>City</label>
                     <input >
                 </md-input-container>
-                <md-input-container flex>
-                    <label>State</label>
-                    <input >
-                </md-input-container>
+                <md-select layout-align="center center" flex-sm="100" placeholder="State" flex ng-model="dummy">
+                    <md-option>AP</md-option>
+                    <md-option>TS</md-option>
+                    <md-option>TN</md-option>
+                    <md-option>KN</md-option>
+                </md-select>
                 <md-input-container flex>
                     <label>Postal Code</label>
                     <input >
@@ -46,8 +54,6 @@
                 <label>Additional Comments</label>
                 <textarea columns="1" ng-model="value1" md-maxlength="150"></textarea>
             </md-input-container>
-
-
         </form>
     </md-content>
     <section layout="row" layout-sm="column">
